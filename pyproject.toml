@@ -1,0 +1,25 @@
+[project]
+name = "possibly_quantum_blog"
+version = "0.1.0"
+description = "possibly-quantum-blog using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.14.4",
+    "pydantic"=2.12.5
+]
+
+[project.scripts]
+possibly_quantum_blog = "possibly_quantum_blog.main:run"
+run_crew = "possibly_quantum_blog.main:run"
+train = "possibly_quantum_blog.main:train"
+replay = "possibly_quantum_blog.main:replay"
+test = "possibly_quantum_blog.main:test"
+run_with_trigger = "possibly_quantum_blog.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

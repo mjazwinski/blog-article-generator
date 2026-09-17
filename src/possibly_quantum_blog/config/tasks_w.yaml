@@ -1,0 +1,58 @@
+stylist_task:
+  description: >
+    Review style examples in knowledge base. Review article data passed in {research_data}. 
+    Create a style recommendations for the artcicle. Style recommendation examples are:
+    * write code samples in dedicated monospace font and separated paragraph
+    * keep paragraph under 20 sentences
+    * article must be under 2500 words
+  expected_output: >
+    A list of max 15 style recommendations
+  agent: stylist
+
+planner_task:
+  description: >
+    Plan the artcile outline based on {research_data} and style guidelines, what to write in each section.
+    Make sure you find interesting and relevant information from blogs.
+    Look for good tips and hacks that will help the audience to learn the topic.
+    Do not divide article into more then 6 sections in total
+  expected_output: >
+    1. A comprehensive content plan document with a detailed outline to pass to the writer
+    2. Audience analysis
+    3. Include SEO keywords and relevant data or sources to write the article.
+    4. Include an idea for a code example of {topic}.
+  agent: planner
+
+writer_task:
+  description: >
+    Review the plan you got and expand each point into a full section for a article based on {research_data}.
+    Make sure the article is detailed and contains any and all relevant information.
+    Incorporate SEO keywords naturally. Do not force SEO keywords usage.
+    Write the article using data in {research_data}
+  expected_output: >
+    A fully fledged article with the main points, each with a full section of information.
+    Article written according to style directions from the stylist.
+    Each paragraph must have at most 300 words.
+    Formatted as markdown without '```'
+  agent: writer
+  
+illustrate:
+  description: >
+    Generate a picture about {topic}
+  expected_output: >
+    1. Understand the content of the blog post
+    2. Generate a picture in JPG format to illustrate the blog post
+  agent: illustrator
+  output_file: picture.txt
+
+editor_task:
+  description: >
+    Review the article you got and make required adjustments.
+    Look for grammar errors.
+    Look for logical errors.
+    Look for style violations.
+  expected_output: >
+    A reviewed artile stored on {output} folder.
+    Grammar errors fixed if found.
+    Logical errors fixed if found.
+    Style violation fixed if found.
+  agent: editor

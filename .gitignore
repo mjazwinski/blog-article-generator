@@ -1,0 +1,7 @@
+.venv
+knowledge/*.pdf
+output/*
+Lib/*
+Scripts/*
+**/.env
+.env
