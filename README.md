@@ -32,10 +32,13 @@ crewai install
 To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
 ```bash
-$ crewai run
+$ python -m uv run run_crew --topic "<topic>"
 ```
+For example:
 
-This command initializes the possibly-quantum-blog Crew, assembling the agents and assigning them tasks as defined in your configuration.
+```bash
+$ python -m uv run run_crew --topic "Quantum communication - how to get qbits that are entangled"
+```
 
 This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
