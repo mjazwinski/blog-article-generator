@@ -5,3 +5,5 @@ Lib/*
 Scripts/*
 **/.env
 **/*.pyc
+.env
+**/*.pyc
