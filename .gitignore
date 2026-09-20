@@ -4,4 +4,4 @@ output/*
 Lib/*
 Scripts/*
 **/.env
-.env
+**/*.pyc

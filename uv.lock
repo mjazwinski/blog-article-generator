@@ -2202,7 +2202,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "crewai", extras = ["tools"], specifier = "==1.14.4" },
-    { name = "pydantic" },
+    { name = "pydantic", specifier = "==2.12.5" },
 ]
 
 [[package]]
