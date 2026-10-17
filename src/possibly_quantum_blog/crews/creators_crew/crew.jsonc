@@ -7,6 +7,7 @@
       "description": "Review style examples in knowledge base. Review article data passed in {research_data}. Create a style recommendations for the artcicle. Style recommendation examples are: \n* write code samples in dedicated monospace font and separated paragraph \n* keep paragraph under 20 sentences \n* article must be under 2500 words",
       "expected_output": "A list of max 15 style recommendations.",
       "agent": "stylist",
+      "output_file": "style.md",
       "markdown": true
     },
     {
@@ -15,6 +16,7 @@
       "expected_output": "1. A comprehensive content plan document with a detailed outline to pass to the writer \n2. Audience analysis \n3. Include SEO keywords and relevant data or sources to write the article. \n4. Include an idea for a code example of {topic}.",
       "agent": "planner",
       "context": ["stylist_task"],
+      "output_file": "plan.md",
       "markdown": true
     },
     {
@@ -23,6 +25,7 @@
       "expected_output": "A fully fledged article with the main points, each with a full section of information. Article written according to style directions from the stylist. Each paragraph must have at most 300 words. Formatted as markdown without '```'",
       "agent": "writer",
       "context": ["planner_task"],
+      "output_file": "article.md",
       "markdown": true
     },
     {
@@ -31,6 +34,7 @@
       "expected_output": "1. Understand the content of the blog post \n2. Generate a picture in JPG format to illustrate the blog post",
       "agent": "illustrator",
       "context": ["planner_task"],
+      "output_file": "output/picture.txt",
       "markdown": true
     },
     {
@@ -39,6 +43,7 @@
       "expected_output": "A reviewed artile stored on {output} folder. Grammar errors fixed if found. Logical errors fixed if found. Style violation fixed if found.",
       "agent": "editor",
       "context": ["planner_task"],
+      "output_file": "final_article.md",
       "markdown": true
     }
   ],

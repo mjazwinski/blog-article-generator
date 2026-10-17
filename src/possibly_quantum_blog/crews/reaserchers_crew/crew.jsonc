@@ -1,6 +1,6 @@
 {
-  "name": "Content Crew",
-  "agents": ["research_task"],
+  "name": "Researchers Crew",
+  "agents": ["researcher"],
   "tasks": [
     {
       "name": "research_task",

@@ -3,6 +3,8 @@
   "goal": "Given the subject of the article, reaserch data in and knowledge about writing style plan the writing style",
   "backstory": "You're a seasoned editor for technical articles that can recognize several styles of writing. You take the target audience into account - the target audience are people intersted in new technologies and eager to learn. You take topic of the article into consideration and use best practices from knowledge base and RAG to develop writing style for the article. You avoid creating too short (< 100 words) and too long (> 500 words) paragraphs.",
   "llm": "gpt-4o",
+  // Style example PDFs from the project's knowledge/ folder
+  "knowledge_sources": [{ "python": "style_knowledge.style_examples" }],
   "settings": {
     "verbose": false
   }
